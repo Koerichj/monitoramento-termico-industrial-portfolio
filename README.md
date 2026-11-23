@@ -12,6 +12,18 @@ A solução implementa uma **camada de software para monitoramento**, com geraç
 
 > **Escopo desta versão:** o fluxo opera com **dados simulados no Node-RED**. Existe um adaptador de entrada para dados de CLP virtual, mas a aquisição efetiva de um CLP e os sensores físicos **não foram integrados nem validados**. O sistema monitora e classifica informações; **não comanda válvulas nem controla a planta física**.
 
+## Interface do sistema
+
+Abaixo estão algumas telas do dashboard web utilizado para acompanhar o processo simulado de pré-aquecimento de água.
+
+### Visão geral do monitoramento
+
+![Dashboard - visão geral](docs/imagens/dashboard-visao-geral.png)
+
+### Gráfico histórico, diagnóstico e últimas leituras
+
+![Dashboard - gráfico, diagnóstico e tabela](docs/imagens/dashboard-grafico-tabela.png)
+
 ## Arquitetura
 
 ![Arquitetura de processamento dos dados](docs/imagens/arquitetura-processamento.jpg)
@@ -125,4 +137,10 @@ Os parâmetros do código versionado podem diferir de valores apresentados em ve
 
 **Autor:** Jean Koerich — **UNIDAVI**, Bacharelado em Sistemas de Informação, 2026.
 
-**Licença:** ainda não definida. A disponibilização do código para avaliação pública **não constitui concessão automática de permissão para redistribuição ou reutilização**. A licença deverá ser escolhida antes da publicação definitiva.
+## Licença
+
+Este repositório está público para fins de apresentação acadêmica e portfólio profissional.
+
+No momento, nenhum arquivo `LICENSE` foi definido. Isso significa que a visualização pública do código e da documentação **não concede automaticamente permissão de reutilização, modificação ou redistribuição**.
+
+Caso seja do interesse do autor, uma licença poderá ser adicionada futuramente.
