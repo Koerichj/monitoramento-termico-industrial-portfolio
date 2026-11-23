@@ -1,0 +1,43 @@
+# CREDENCIAIS E CONFIGURAÇÕES LOCAIS
+.env
+.env.*
+*.key
+*.pem
+.pgpass
+
+# BANCO DE DADOS LOCAL / BACKUPS
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+database/backups/
+*.dump
+*.backup
+
+# NODE.JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# NODE-RED
+.node-red/
+flows_cred.json
+flows_cred_*.json
+
+# SISTEMA OPERACIONAL
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# EDITORES
+.vscode/
+.idea/
+
+# ARQUIVOS TEMPORÁRIOS
+*.tmp
+*.log
+*.bak
+*~

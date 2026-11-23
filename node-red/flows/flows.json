@@ -1,0 +1,1041 @@
+[
+    {
+        "id": "d2f809a41b3a4303",
+        "type": "tab",
+        "label": "Geral",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "db63f8690de4680c",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "52c251c8f1fadf13",
+        "type": "tab",
+        "label": "Fluxo 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ec6dfb29214d4a71",
+        "type": "subflow",
+        "name": "Entrada",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 320,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "975e1e1637ba8bb3"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1460,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "737817fd6c2e0ebb",
+                        "port": 0
+                    },
+                    {
+                        "id": "dcfca3bae3f5d57c",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "69ea3584412aa93b",
+        "type": "subflow",
+        "name": "Pré-processamento",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 460,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "b1ea8659bf85ec4a"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1120,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "c5ea29440f6d1ad7",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "be51cd707e965d3f",
+        "type": "subflow",
+        "name": "Processamento",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 380,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "d96924a5afcc066e"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1040,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "3bbbb85ab49eb6d4",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "00f0e3ded8af766d",
+        "type": "subflow",
+        "name": "Classificação",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 600,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "abe52c4469a73f11"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1020,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "abe52c4469a73f11",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "a485149e4ab75a43",
+        "type": "subflow",
+        "name": "Persistência",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "ee56120d6133a4bd"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "6f575ce57b5aa039",
+        "type": "subflow",
+        "name": "API REST Dashboard",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "420e1a1064454935",
+        "type": "group",
+        "z": "ec6dfb29214d4a71",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "dcfca3bae3f5d57c",
+            "737817fd6c2e0ebb",
+            "975e1e1637ba8bb3",
+            "b73b7917cf8fe9e0"
+        ],
+        "x": 394,
+        "y": 259,
+        "w": 812,
+        "h": 122
+    },
+    {
+        "id": "30f40e051565525d",
+        "type": "group",
+        "z": "69ea3584412aa93b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "c5ea29440f6d1ad7",
+            "b1ea8659bf85ec4a"
+        ],
+        "x": 534,
+        "y": 299,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "0d513a59267be34c",
+        "type": "group",
+        "z": "00f0e3ded8af766d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "abe52c4469a73f11"
+        ],
+        "x": 674,
+        "y": 319,
+        "w": 272,
+        "h": 82
+    },
+    {
+        "id": "1d6b131c308585eb",
+        "type": "group",
+        "z": "be51cd707e965d3f",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3bbbb85ab49eb6d4",
+            "d96924a5afcc066e"
+        ],
+        "x": 454,
+        "y": 319,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "fca42a5f0cb0c94b",
+        "type": "group",
+        "z": "a485149e4ab75a43",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "ee56120d6133a4bd",
+            "5de9641f24aa0058",
+            "250d35b2ce4c9a95",
+            "17327f16a1d4589c",
+            "d7bd3a3405c1562e"
+        ],
+        "x": 214,
+        "y": 239,
+        "w": 1102,
+        "h": 142
+    },
+    {
+        "id": "ed3b308ff7216c51",
+        "type": "postgreSQLConfig",
+        "z": "a485149e4ab75a43",
+        "name": "monitoramento_termico",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "monitoramento_termico",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "fbb892f704ea7a6c",
+        "type": "postgreSQLConfig",
+        "z": "6f575ce57b5aa039",
+        "name": "monitoramento_termico",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "monitoramento_termico",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "dcfca3bae3f5d57c",
+        "type": "function",
+        "z": "ec6dfb29214d4a71",
+        "g": "420e1a1064454935",
+        "name": "F1 Simular dados",
+        "func": "// F1 - SIMULAR DADOS DO PROCESSO\n\n// Simula o comportamento de um processo de pré-aquecimento\n// de água com estados operacionais.\n\n\n// 1. Parâmetros do processo\nconst temperatura_minima_liberacao = 36; // 2*temperatura_ambiente\nconst temperatura_maxima_seguranca = 70; //Suposição\nconst temperatura_ambiente = 18; //Considerando Alto Vale do Itajaí\nconst vazao_nominal_l_min = 12; // litros/minutos\nconst tempo_maturacao_alvo = 20; //minutos\n\n\n// 2. Recuperação do contexto\nlet estado_processo = context.get(\"estado_processo\") || \"RECARREGANDO\";\nlet temperatura_entrada = context.get(\"temperatura_entrada\") || temperatura_ambiente;\nlet temperatura_saida = context.get(\"temperatura_saida\") || temperatura_ambiente + 2;\nconst ciclo = context.get(\"ciclo\") || 1;\n\n// A amostra descreve o estado atual. O contexto prepara a próxima execução.\nlet proximo_estado = estado_processo;\nlet proximo_ciclo = ciclo;\nlet nivel_tubulacao_percentual = context.get(\"nivel_tubulacao_percentual\") || 0;\nlet tempo_maturacao_min = context.get(\"tempo_maturacao_min\") || 0;\n\n\n// 3. Simulação do fator solar\nlet data = new Date();\nlet hora = data.getHours();\nlet minuto = data.getMinutes();\nlet hora_decimal = hora + (minuto / 60);\n\n// Simulação simples da incidência solar\nlet fator_solar = Math.max(0, Math.sin((hora_decimal - 6) * Math.PI / 12));\n\n// 4. Variáveis de saída\nlet valvula_entrada = \"Fechada\";\nlet valvula_saida = \"Fechada\";\nlet vazao_l_min = 0;\nlet observacao = \"\";\n\n// 5. Máquina de estados\nswitch (estado_processo) {\n\n    case \"AQUECENDO\":\n        valvula_entrada = \"Fechada\";\n        valvula_saida = \"Fechada\";\n        vazao_l_min = 0;\n\n        let ganho_temperatura = (fator_solar * 1.5) - 0.05;\n\n        temperatura_entrada += ganho_temperatura * 0.4;\n        temperatura_saida += ganho_temperatura * 1.2;\n\n        observacao = \"Aquecendo a água na tubulação\";\n\n        if (temperatura_saida >= temperatura_minima_liberacao) {\n            proximo_estado = \"MATURANDO\";\n            tempo_maturacao_min = 0;\n        }\n        break;\n\n    case \"MATURANDO\":\n        valvula_entrada = \"Fechada\";\n        valvula_saida = \"Fechada\";\n        vazao_l_min = 0;\n\n        tempo_maturacao_min += 1;\n        temperatura_saida += fator_solar * 0.2;\n\n        observacao = \"Aguardando estabilização térmica\";\n\n        if (tempo_maturacao_min >= tempo_maturacao_alvo) {\n            proximo_estado = \"TRANSFERINDO\";\n        }\n        break;\n\n    case \"TRANSFERINDO\":\n        valvula_entrada = \"Aberta\";\n        valvula_saida = \"Aberta\";\n        vazao_l_min = vazao_nominal_l_min + (Math.random() - 0.5);\n\n        temperatura_entrada = (temperatura_entrada * 0.5) + (temperatura_ambiente * 0.5);\n        temperatura_saida -= 1.5;\n\n        observacao = \"Transferindo água aquecida para o tanque\";\n\n        if (temperatura_saida < temperatura_minima_liberacao - 5) {\n            proximo_estado = \"RECARREGANDO\";\n            nivel_tubulacao_percentual = 80;\n            proximo_ciclo += 1;\n        }\n        break;\n\n    case \"RECARREGANDO\":\n    default:\n        estado_processo = \"RECARREGANDO\";\n        proximo_estado = estado_processo;\n        valvula_entrada = \"Aberta\";\n        valvula_saida = \"Fechada\";\n        vazao_l_min = vazao_nominal_l_min * 0.8;\n\n        nivel_tubulacao_percentual += 20;\n\n        temperatura_entrada = temperatura_ambiente + Math.random();\n        temperatura_saida = (temperatura_saida * 0.6) + (temperatura_entrada * 0.4);\n\n        observacao = \"Recarregando tubulação com água nova\";\n\n        if (nivel_tubulacao_percentual >= 100) {\n            nivel_tubulacao_percentual = 100;\n            proximo_estado = \"AQUECENDO\";\n        }\n        break;\n}\n\n// 6. Travamento de limites físicos\nif (temperatura_saida > temperatura_maxima_seguranca) {\n    temperatura_saida = temperatura_maxima_seguranca;\n}\n\nif (temperatura_entrada < temperatura_ambiente - 2) {\n    temperatura_entrada = temperatura_ambiente - 2;\n}\n\nif (temperatura_saida < temperatura_entrada) {\n    temperatura_saida = temperatura_entrada;\n}\n\nif (nivel_tubulacao_percentual > 100) {\n    nivel_tubulacao_percentual = 100;\n}\n\n// 7. Montagem do payload padronizado\nmsg.payload = {\n    origem: \"simulado\",\n    timestamp: data.toISOString(),\n    estado_processo: estado_processo,\n    ciclo: ciclo,\n\n    temperatura_entrada: Number(temperatura_entrada.toFixed(2)),\n    temperatura_saida: Number(temperatura_saida.toFixed(2)),\n    vazao_l_min: Number(vazao_l_min.toFixed(2)),\n\n    valvula_entrada: valvula_entrada,\n    valvula_saida: valvula_saida,\n    nivel_tubulacao_percentual: Number(nivel_tubulacao_percentual.toFixed(2)),\n    tempo_maturacao_min: Number(tempo_maturacao_min.toFixed(0)),\n\n    fator_solar: Number(fator_solar.toFixed(2)),\n    observacao: observacao\n};\n\n// 8. Salvamento do contexto\ncontext.set(\"estado_processo\", proximo_estado);\ncontext.set(\"temperatura_entrada\", temperatura_entrada);\ncontext.set(\"temperatura_saida\", temperatura_saida);\ncontext.set(\"ciclo\", proximo_ciclo);\ncontext.set(\"nivel_tubulacao_percentual\", nivel_tubulacao_percentual);\ncontext.set(\"tempo_maturacao_min\", tempo_maturacao_min);\n\n// 9. Status visual do nó\nnode.status({\n    fill: \"blue\",\n    shape: \"dot\",\n    text: `${estado_processo} | ${msg.payload.temperatura_saida}°C`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "737817fd6c2e0ebb",
+        "type": "function",
+        "z": "ec6dfb29214d4a71",
+        "g": "420e1a1064454935",
+        "name": "F2 Ler CLP Virtual Siemens",
+        "func": "// F2 - LER CLP VIRTUAL SIEMENS\n\n// Dados recebidos do nó responsável pela comunicação\n// com o CLP virtual Siemens.\n\nlet clp = msg.payload || {};\n\nmsg.payload = {\n\n    origem: \"clp\",\n    timestamp: clp.timestamp || new Date().toISOString(),\n\n    estado_processo: clp.estado_processo ?? null,\n    ciclo: clp.ciclo ?? null,\n\n    temperatura_entrada: clp.temperatura_entrada ?? null,\n    temperatura_saida: clp.temperatura_saida ?? null,\n    vazao_l_min: clp.vazao_l_min ?? null,\n\n    valvula_entrada: clp.valvula_entrada ?? null,\n    valvula_saida: clp.valvula_saida ?? null,\n\n    nivel_tubulacao_percentual:\n        clp.nivel_tubulacao_percentual ?? null,\n\n    tempo_maturacao_min:\n        clp.tempo_maturacao_min ?? null,\n\n    fator_solar: clp.fator_solar ?? null,\n\n    observacao:\n        clp.observacao || \"Dados recebidos do CLP virtual Siemens\"\n};\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: \"Dados recebidos do CLP\"\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "975e1e1637ba8bb3",
+        "type": "function",
+        "z": "ec6dfb29214d4a71",
+        "g": "420e1a1064454935",
+        "name": "F0 Selecionar origem",
+        "func": "// F0 - SELECIONAR ORIGEM DOS DADOS\n\n// \"simulado\" = Node-RED gera os dados\n// \"clp\"      = dados vindos do CLP virtual Siemens\n\nmsg.origem = \"simulado\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 320,
+        "wires": [
+            [
+                "b73b7917cf8fe9e0"
+            ]
+        ]
+    },
+    {
+        "id": "b73b7917cf8fe9e0",
+        "type": "switch",
+        "z": "ec6dfb29214d4a71",
+        "g": "420e1a1064454935",
+        "name": "SW Origem dos dados",
+        "property": "origem",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "simulado",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "clp",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 780,
+        "y": 320,
+        "wires": [
+            [
+                "dcfca3bae3f5d57c"
+            ],
+            [
+                "737817fd6c2e0ebb"
+            ]
+        ]
+    },
+    {
+        "id": "c5ea29440f6d1ad7",
+        "type": "function",
+        "z": "69ea3584412aa93b",
+        "g": "30f40e051565525d",
+        "name": "F4 Validar dados",
+        "func": "// F4 - VALIDAR DADOS\n\n// Objetivo:\n// Verificar se os dados normalizados possuem valores válidos\n// e se atendem às regras definidas para o processo.\n\nlet d = msg.payload || {};\nlet alertas = [];\nlet status_validacao = \"OK\";\n\n// FUNÇÃO AUXILIAR\n\n// Mantém a prioridade:\nfunction atualizarStatus(novoStatus) {\n    const prioridade = {\n        OK: 0,\n        ALERTA: 1,\n        ERRO: 2,\n    };\n\n    if (prioridade[novoStatus] > prioridade[status_validacao]) {\n        status_validacao = novoStatus;\n    }\n}\n\n// 1. VERIFICAR NORMALIZAÇÃO\nif (d.normalizado !== true) {\n    alertas.push(\"Dados não passaram pela etapa de normalização\");\n    atualizarStatus(\"ERRO\");\n}\n\n// 2. VERIFICAR CAMPOS OBRIGATÓRIOS\nif (!d.origem || d.origem === \"desconhecida\") {\n    alertas.push(\"Origem dos dados não informada\");\n    atualizarStatus(\"ERRO\");\n}\n\nif (!d.timestamp || Number.isNaN(Date.parse(d.timestamp))) {\n    alertas.push(\"Timestamp inválido\");\n    atualizarStatus(\"ERRO\");\n}\n\nif (!d.estado_processo || d.estado_processo === \"INDEFINIDO\") {\n    alertas.push(\"Estado do processo não informado\");\n    atualizarStatus(\"ERRO\");\n}\n\n// 3. VERIFICAR CAMPOS NUMÉRICOS\nif (!Number.isFinite(d.temperatura_entrada)) {\n    alertas.push(\"Temperatura de entrada inválida\");\n    atualizarStatus(\"ERRO\");\n}\n\nif (!Number.isFinite(d.temperatura_saida)) {\n    alertas.push(\"Temperatura de saída inválida\");\n    atualizarStatus(\"ERRO\");\n}\n\nif (!Number.isFinite(d.vazao_l_min)) {\n    alertas.push(\"Vazão inválida\");\n    atualizarStatus(\"ERRO\");\n}\n\nif (!Number.isFinite(d.nivel_tubulacao_percentual)) {\n    alertas.push(\"Nível da tubulação inválido\");\n    atualizarStatus(\"ERRO\");\n}\n\nif (!Number.isFinite(d.tempo_maturacao_min)) {\n    alertas.push(\"Tempo de maturação inválido\");\n    atualizarStatus(\"ERRO\");\n}\n\nif (!Number.isFinite(d.ciclo)) {\n    alertas.push(\"Número do ciclo inválido\");\n    atualizarStatus(\"ERRO\");\n}\n\n// Ciclo deve ser um número inteiro.\nif (Number.isFinite(d.ciclo) && !Number.isInteger(d.ciclo)) {\n    alertas.push(\"Número do ciclo deve ser inteiro\");\n    atualizarStatus(\"ERRO\");\n}\n\n// 4. APLICAR LIMITES\nif (Number.isFinite(d.temperatura_entrada) && (d.temperatura_entrada < 0 || d.temperatura_entrada > 100)) {\n    alertas.push(\"Temperatura de entrada fora da faixa esperada\");\n    atualizarStatus(\"ALERTA\");\n}\n\nif (Number.isFinite(d.temperatura_saida) && (d.temperatura_saida < 0 || d.temperatura_saida > 110)) {\n    alertas.push(\"Temperatura de saída fora da faixa esperada\");\n    atualizarStatus(\"ALERTA\");\n}\n\nif (Number.isFinite(d.vazao_l_min) && (d.vazao_l_min < 0 || d.vazao_l_min > 100)) {\n    alertas.push(\"Vazão fora da faixa esperada\");\n    atualizarStatus(\"ALERTA\");\n}\n\nif (Number.isFinite(d.nivel_tubulacao_percentual) && (d.nivel_tubulacao_percentual < 0 || d.nivel_tubulacao_percentual > 100)) {\n    alertas.push(\"Nível da tubulação fora da faixa de 0% a 100%\");\n    atualizarStatus(\"ALERTA\");\n}\n\nif (Number.isFinite(d.tempo_maturacao_min) && d.tempo_maturacao_min < 0) {\n    alertas.push(\"Tempo de maturação negativo\");\n    atualizarStatus(\"ALERTA\");\n}\n\nif (Number.isFinite(d.ciclo) && d.ciclo < 0) {\n    alertas.push(\"Número do ciclo negativo\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// O fator solar é opcional.\n// Quando informado, deve estar entre 0 e 1.\n\nif (d.fator_solar !== null && (!Number.isFinite(d.fator_solar) || d.fator_solar < 0 || d.fator_solar > 1)) {\n    alertas.push(\"Fator solar fora da faixa de 0 a 1\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// 5. VALIDAR ESTADOS OPERACIONAIS\nconst estados_validos = [\n    \"RECARREGANDO\",\n    \"AQUECENDO\",\n    \"MATURANDO\",\n    \"TRANSFERINDO\",\n];\n\nif (d.estado_processo && d.estado_processo !== \"INDEFINIDO\" && !estados_validos.includes(d.estado_processo)) {\n    alertas.push(\"Estado do processo desconhecido\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// 6. VALIDAR ESTADO DAS VÁLVULAS\nif (d.valvula_entrada === \"Indefinida\") {\n    alertas.push(\"Estado da válvula de entrada indefinido\");\n    atualizarStatus(\"ALERTA\");\n}\n\nif (d.valvula_saida === \"Indefinida\") {\n    alertas.push(\"Estado da válvula de saída indefinido\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// 7. REGRAS DE CONSISTÊNCIA DO PROCESSO\n\n// RECARREGANDO:\n// entrada aberta e saída fechada.\nif (d.estado_processo === \"RECARREGANDO\" && (d.valvula_entrada !== \"Aberta\" || d.valvula_saida !== \"Fechada\")) {\n    alertas.push(\"Configuração das válvulas incompatível com o estado RECARREGANDO\",);\n    atualizarStatus(\"ALERTA\");\n}\n\n// AQUECENDO:\n// ambas as válvulas devem estar fechadas.\nif (d.estado_processo === \"AQUECENDO\" && (d.valvula_entrada !== \"Fechada\" || d.valvula_saida !== \"Fechada\")) {\n    alertas.push(\"Configuração das válvulas incompatível com o estado AQUECENDO\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// MATURANDO:\n// ambas as válvulas devem estar fechadas.\nif (d.estado_processo === \"MATURANDO\" && (d.valvula_entrada !== \"Fechada\" || d.valvula_saida !== \"Fechada\")) {\n    alertas.push(\"Configuração das válvulas incompatível com o estado MATURANDO\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// TRANSFERINDO:\n// ambas as válvulas devem estar abertas.\nif (d.estado_processo === \"TRANSFERINDO\" && (d.valvula_entrada !== \"Aberta\" || d.valvula_saida !== \"Aberta\")) {\n    alertas.push(\"Configuração das válvulas incompatível com o estado TRANSFERINDO\",);\n    atualizarStatus(\"ALERTA\");\n}\n\n// Não deve existir fluxo durante AQUECENDO ou MATURANDO.\nif (Number.isFinite(d.vazao_l_min) && (d.estado_processo === \"AQUECENDO\" || d.estado_processo === \"MATURANDO\") && d.vazao_l_min > 0.5) {\n    alertas.push(\"Fluxo detectado em estado sem transferência\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// Durante TRANSFERINDO deve existir vazão.\n\nif (Number.isFinite(d.vazao_l_min) && d.estado_processo === \"TRANSFERINDO\" && d.vazao_l_min <= 0.5) {\n    alertas.push(\"Transferência sem vazão detectada\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// Verifica possível perda térmica.\n\nif (Number.isFinite(d.temperatura_entrada) && Number.isFinite(d.temperatura_saida) && d.temperatura_saida < d.temperatura_entrada) {\n    alertas.push(\"Temperatura de saída menor que temperatura de entrada\");\n    atualizarStatus(\"ALERTA\");\n}\n\n// 8. MONTAGEM DO PAYLOAD VALIDADO\nd.validado = status_validacao !== \"ERRO\";\nd.status_validacao = status_validacao;\nd.alertas = alertas;\nmsg.payload = d;\n\n// 9. STATUS VISUAL DO NÓ\nlet cor = \"green\";\n\nif (status_validacao === \"ALERTA\") {\n    cor = \"yellow\";\n}\n\nif (status_validacao === \"ERRO\") {\n    cor = \"red\";\n}\n\nnode.status({\n    fill: cor,\n    shape: \"dot\",\n    text: `${status_validacao} | ${alertas.length} alerta(s)`,\n});\n\n// 10. BLOQUEIO DE ERROS CRÍTICOS\nif (status_validacao === \"ERRO\") {\n    node.warn(alertas.join(\" | \"));\n\n    return null;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1ea8659bf85ec4a",
+        "type": "function",
+        "z": "69ea3584412aa93b",
+        "g": "30f40e051565525d",
+        "name": "F3 Normalizar estrutura",
+        "func": "// F3 - NORMALIZAR ESTRUTURA\n\n// Objetivo:\n// Garantir que os dados vindos do simulador ou do CLP\n// tenham sempre o mesmo formato para as próximas etapas.\n\nlet d = msg.payload || {};\nlet data = new Date();\n\n\n// 1. FUNÇÕES AUXILIARES\n// Valores ausentes, vazios ou inválidos são definidos como null.\nfunction normalizarNumero(valor) {\n\n    if (\n        valor === null ||\n        valor === undefined ||\n        (typeof valor === \"string\" && valor.trim() === \"\")\n    ) {\n        return null;\n    }\n\n    let numero = Number(valor);\n\n    if (!Number.isFinite(numero)) {\n        return null;\n    }\n\n    return numero;\n}\n\n\n// Padroniza os valores das válvulas.\nfunction normalizarValvula(valor) {\n\n    valor = String(valor ?? \"Indefinida\")\n        .trim()\n        .toLowerCase();\n\n    if (valor === \"aberta\") {\n        return \"Aberta\";\n    }\n\n    if (valor === \"fechada\") {\n        return \"Fechada\";\n    }\n\n    return \"Indefinida\";\n}\n\n\n// 2. NORMALIZAÇÃO DOS CAMPOS PRINCIPAIS\nlet origem = String(\n    d.origem ||\n    msg.origem ||\n    \"desconhecida\"\n)\n    .trim()\n    .toLowerCase();\n\n\nlet timestamp;\n\nif (\n    d.timestamp === null ||\n    d.timestamp === undefined ||\n    d.timestamp === \"\"\n) {\n    timestamp = data.toISOString();\n} else {\n    timestamp = String(d.timestamp).trim();\n}\n\n\nlet estado_processo = String(\n    d.estado_processo || \"INDEFINIDO\"\n)\n    .trim()\n    .toUpperCase();\n\n\n// 3. NORMALIZAÇÃO DOS CAMPOS NUMÉRICOS\nlet ciclo = normalizarNumero(d.ciclo);\n\nlet temperatura_entrada = normalizarNumero(d.temperatura_entrada);\n\nlet temperatura_saida = normalizarNumero(d.temperatura_saida);\n\nlet vazao_l_min = normalizarNumero(d.vazao_l_min);\n\nlet nivel_tubulacao_percentual = normalizarNumero(d.nivel_tubulacao_percentual);\n\nlet tempo_maturacao_min = normalizarNumero(d.tempo_maturacao_min);\n\nlet fator_solar = normalizarNumero(d.fator_solar);\n\n// 4. NORMALIZAÇÃO DAS VÁLVULAS\nlet valvula_entrada = normalizarValvula(d.valvula_entrada);\n\nlet valvula_saida = normalizarValvula(d.valvula_saida);\n\n// 5. NORMALIZAÇÃO DA OBSERVAÇÃO\nlet observacao = String(d.observacao || \"\").trim();\n\n\n// 6. MONTAGEM DO PAYLOAD NORMALIZADO\nmsg.payload = {\n\n    origem: origem,\n    timestamp: timestamp,\n    estado_processo: estado_processo,\n    ciclo: ciclo,\n\n    temperatura_entrada: temperatura_entrada,\n    temperatura_saida: temperatura_saida,\n    vazao_l_min: vazao_l_min,\n\n    valvula_entrada: valvula_entrada,\n    valvula_saida: valvula_saida,\n\n    nivel_tubulacao_percentual:\n        nivel_tubulacao_percentual,\n\n    tempo_maturacao_min:\n        tempo_maturacao_min,\n\n    fator_solar: fator_solar,\n\n    observacao: observacao,\n\n    normalizado: true\n};\n\n// 7. STATUS VISUAL DO NÓ\nnode.status({\n    fill: \"blue\",\n    shape: \"dot\",\n    text: `${origem} | ${estado_processo}`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "c5ea29440f6d1ad7"
+            ]
+        ]
+    },
+    {
+        "id": "3bbbb85ab49eb6d4",
+        "type": "function",
+        "z": "be51cd707e965d3f",
+        "g": "1d6b131c308585eb",
+        "name": "F5 Calcular indicadores",
+        "func": "// F5 - CALCULAR INDICADORES\n\n// Objetivo:\n// Calcular os principais indicadores do processo:\n// delta_t, volume, energia e economia.\n\nlet d = msg.payload || {};\n\n// 1. Veficar validação do F4\nif (d.validado !== true) {\n    node.warn(\"Dados não passaram pela etapa de validação\");\n    return null;\n}\n\n// 2. Constantes do processo\nconst calor_especifico_agua_kj = 4.18;   // kJ/kg°C\nconst litros_para_kg = 1;                 // 1 litro de água ≈ 1 kg\nconst intervalo_min = 1;                  // intervalo do inject em minutos\nconst delta_t_referencia = 15;            // referência para desempenho térmico percentual\nconst tarifa_recebida = Number(msg.preco_kwh);\n\nconst preco_kwh = Number.isFinite(tarifa_recebida) && tarifa_recebida > 0\n    ? tarifa_recebida\n    : 0.52;\n\n// 3. Recuperação dos dados recebidos\nlet temperatura_entrada = d.temperatura_entrada;\nlet temperatura_saida = d.temperatura_saida;\nlet vazao_l_min = d.vazao_l_min;\n\n// 4. Cálculo do Delta T\nlet delta_t = temperatura_saida - temperatura_entrada;\n\n// valores negativos são considerados zero.\nif (delta_t < 0) {\n    delta_t = 0;\n}\n\n\n// 5. Cálculo do volume do instante\nlet volume_instante_l = vazao_l_min * intervalo_min;\n\n// Desconsidera volumes residuais muito pequenos\nif (volume_instante_l < 0.05) {\n    volume_instante_l = 0;\n}\n\n\n// 6. Controle de reset diário\nlet data = new Date();\n\n//ANO-MES-DIA\nlet data_hoje =\n    data.getFullYear() + \"-\" +\n    String(data.getMonth() + 1).padStart(2, \"0\") + \"-\" +\n    String(data.getDate()).padStart(2, \"0\");\n\nlet ultima_data = context.get(\"ultima_data\") ?? data_hoje;\nlet volume_total_l = context.get(\"volume_total_l\") ?? 0;\nlet energia_total_kwh = context.get(\"energia_total_kwh\") ?? 0;\n\nif (ultima_data !== data_hoje) {\n    volume_total_l = 0;\n    energia_total_kwh = 0;\n}\n\n\n// 7. Acúmulo do volume\nvolume_total_l += volume_instante_l;\n\n\n//----------------------------------------------------\n// 8. Cálculo da energia\n// Fórmula: Q = m * c * ΔT\n// m = massa da água em kg\n// c = calor específico da água\n// ΔT = diferença de temperatura\n//----------------------------------------------------\n\nlet massa_kg = volume_instante_l * litros_para_kg;\nlet energia_kj = 0;\n\nif (vazao_l_min > 0.5 && delta_t > 0) {\n    energia_kj = massa_kg * calor_especifico_agua_kj * delta_t;\n}\n\nlet energia_kwh = energia_kj / 3600;\n\n\n// 9. Acúmulo da energia\nenergia_total_kwh += energia_kwh;\n\n\n// 10. Indicador Percentual\nlet desempenho_termico_percentual = (delta_t / delta_t_referencia) * 100;\n\nif (desempenho_termico_percentual > 100) {\n    desempenho_termico_percentual = 100;\n}\n\nif (desempenho_termico_percentual < 0) {\n    desempenho_termico_percentual = 0;\n}\n\nlet economia_reais = energia_total_kwh * preco_kwh;\n\n\n// 11. Atualização do payload\nd.delta_t = Number(delta_t.toFixed(2));\nd.volume_instante_l = Number(volume_instante_l.toFixed(3));\nd.volume_total_l = Number(volume_total_l.toFixed(2));\nd.energia_kj = Number(energia_kj.toFixed(2));\nd.energia_kwh = Number(energia_kwh.toFixed(5));\nd.energia_total_kwh = Number(energia_total_kwh.toFixed(5));\nd.desempenho_termico_percentual = Number(desempenho_termico_percentual.toFixed(2));\nd.economia_reais = Number(economia_reais.toFixed(2));\nd.processado = true;\n\nmsg.payload = d;\n\n\n// 12. Salvamento do contexto\ncontext.set(\"ultima_data\", data_hoje);\ncontext.set(\"volume_total_l\", volume_total_l);\ncontext.set(\"energia_total_kwh\", energia_total_kwh);\n\n\n// 13. Status visual do nó\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `ΔT ${d.delta_t}°C | ${d.energia_total_kwh} kWh`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d96924a5afcc066e",
+        "type": "function",
+        "z": "be51cd707e965d3f",
+        "g": "1d6b131c308585eb",
+        "name": "Tarifa de energia",
+        "func": "// Tarifa de energia utilizada para estimativa financeira.\n// Valor configurável diretamente no fluxo do Node-RED.\nmsg.preco_kwh = 0.51;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 360,
+        "wires": [
+            [
+                "3bbbb85ab49eb6d4"
+            ]
+        ]
+    },
+    {
+        "id": "abe52c4469a73f11",
+        "type": "function",
+        "z": "00f0e3ded8af766d",
+        "g": "0d513a59267be34c",
+        "name": "F6 Classificar processo",
+        "func": "// F6 - CLASSIFICAR PROCESSO\n\n// Objetivo:\n// Classificar o estado operacional do sistema com base\n// nos dados processados na etapa anterior.\n\nlet d = msg.payload || {};\n\n// 1. Verificar se os dados passaram pela classificação\nif (d.processado !== true) {\n    node.warn(\"Dados não passaram pela etapa de processamento\");\n    return null;\n}\n\n// Limitadores\nconst fluxo_minimo_l_min = 0.5;\nconst temp_baixa_limite = 35;\nconst temp_moderada_limite = 45;\nconst temp_adequada_limite = 60;\nconst temp_critica = 85;\nconst temp_minima_transferencia = 40;\nconst delta_t_baixo = 2;\nconst eficiencia_media = 30;\nconst eficiencia_alta = 70;\n\n// 2. Recuperação dos dados principais\nlet estado = d.estado_processo;\nlet temperatura_saida = d.temperatura_saida;\nlet vazao_l_min = d.vazao_l_min;\nlet delta_t = d.delta_t;\nlet desempenho_termico_percentual = d.desempenho_termico_percentual;\nlet valvula_entrada = d.valvula_entrada;\nlet valvula_saida = d.valvula_saida;\n\n// 3. Status operacional\nlet status_operacional = \"Indefinido\";\n\nswitch (estado) {\n    case \"RECARREGANDO\":\n        status_operacional = \"Recarregando\";\n        break;\n\n    case \"AQUECENDO\":\n        status_operacional = \"Aquecendo\";\n        break;\n\n    case \"MATURANDO\":\n        status_operacional = \"Maturando\";\n        break;\n\n    case \"TRANSFERINDO\":\n        status_operacional = \"Transferindo\";\n        break;\n\n    default:\n        status_operacional = \"Indefinido\";\n        break;\n}\n\n// 4. Condição térmica\nlet condicao_termica = \"Indefinida\";\n\nif (temperatura_saida < temp_baixa_limite) {\n    condicao_termica = \"Baixa\";\n}\n\nelse if (temperatura_saida < temp_moderada_limite) {\n    condicao_termica = \"Moderada\";\n}\n\nelse if (temperatura_saida <= temp_adequada_limite) {\n    condicao_termica = \"Adequada\";\n}\n\nelse {\n    condicao_termica = \"Elevada\";\n}\n\n// 5. Condição de transferência\nlet condicao_transferencia = \"Sem fluxo\";\n\nif (vazao_l_min > fluxo_minimo_l_min) {\n    if (valvula_entrada === \"Aberta\" && valvula_saida === \"Aberta\") {\n        condicao_transferencia = \"Transferindo água\";\n    }\n    else if (valvula_entrada === \"Aberta\" && valvula_saida === \"Fechada\") {\n        condicao_transferencia = \"Recarregando tubulação\";\n    }\n    else {\n        condicao_transferencia = \"Fluxo em condição incomum\";\n    }\n}\n\n// 6. Faixa de eficiência\nlet faixa_desempenho_termico = \"Baixa\";\n\nif (desempenho_termico_percentual >= eficiencia_media && desempenho_termico_percentual < eficiencia_alta) {\n    faixa_desempenho_termico = \"Média\";\n}\n\nelse if (desempenho_termico_percentual >= eficiencia_alta) {\n    faixa_desempenho_termico = \"Alta\";\n}\n\n// 7. Status das válvulas\nlet status_valvulas = \"Indefinido\";\n\nif (valvula_entrada === \"Fechada\" && valvula_saida === \"Fechada\") {\n    status_valvulas = \"Ambas fechadas\";\n}\n\nelse if (valvula_entrada === \"Aberta\" && valvula_saida === \"Aberta\") {\n    status_valvulas = \"Ambas abertas\";\n}\n\nelse if (valvula_entrada === \"Aberta\" && valvula_saida === \"Fechada\") {\n    status_valvulas = \"Entrada aberta\";\n}\n\nelse if (valvula_entrada === \"Fechada\" && valvula_saida === \"Aberta\") {\n    status_valvulas = \"Configuração anômala\";\n}\n\n// 8. Criticidade operacional\nlet criticidade = \"Normal\";\n\nif (temperatura_saida > temp_critica) {\n    criticidade = \"Crítica - Alta temperatura\";\n}\n\nelse if ((estado === \"TRANSFERINDO\" || estado === \"RECARREGANDO\") && vazao_l_min <= fluxo_minimo_l_min) {\n    criticidade = \"Crítica - Falha de fluxo\";\n}\n\nelse if (estado === \"TRANSFERINDO\" && temperatura_saida < temp_minima_transferencia) {\n    criticidade = \"Atenção - Perda de calor\";\n}\n\nelse if (delta_t < delta_t_baixo && (estado === \"AQUECENDO\" || estado === \"MATURANDO\")) {\n    criticidade = \"Atenção - Baixo ganho térmico\";\n}\n\n// 9. Atualização do payload\nd.status_operacional = status_operacional;\nd.condicao_termica = condicao_termica;\nd.condicao_transferencia = condicao_transferencia;\nd.faixa_desempenho_termico = faixa_desempenho_termico;\nd.status_valvulas = status_valvulas;\nd.criticidade = criticidade;\nd.classificado = true;\n\nmsg.payload = d;\n\n// 10. Status visual do nó\nlet cor = \"green\";\n\nif (criticidade.startsWith(\"Atenção\")) {\n    cor = \"yellow\";\n}\n\nif (criticidade.startsWith(\"Crítica\")) {\n    cor = \"red\";\n}\n\nnode.status({\n    fill: cor,\n    shape: \"dot\",\n    text: `${status_operacional} | ${criticidade}`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee56120d6133a4bd",
+        "type": "function",
+        "z": "a485149e4ab75a43",
+        "g": "fca42a5f0cb0c94b",
+        "name": "F7 Preparar registro final",
+        "func": "// F7 - PREPARAR REGISTRO FINAL\n\n// Objetivo:\n// Organizar todos os dados finais em um único payload\n\nlet d = msg.payload || {};\n\n// 1. Verificar se os dados passaram pela classificação\nif (d.classificado !== true) {\n    node.warn(\"Dados não passaram pela etapa de classificação\");\n    return null;\n}\n\n// 2. Montagem do registro final\nmsg.payload = {\n\n    // Identificação\n    origem: d.origem,\n    timestamp: d.timestamp,\n    ciclo: d.ciclo,\n\n    // Estado do processo\n    estado_processo: d.estado_processo,\n    status_operacional: d.status_operacional,\n\n    // Temperaturas\n    temperatura_entrada: d.temperatura_entrada,\n    temperatura_saida: d.temperatura_saida,\n    delta_t: d.delta_t,\n\n    // Vazão e volume\n    vazao_l_min: d.vazao_l_min,\n    volume_instante_l: d.volume_instante_l,\n    volume_total_l: d.volume_total_l,\n\n    // Válvulas e processo\n    valvula_entrada: d.valvula_entrada,\n    valvula_saida: d.valvula_saida,\n    nivel_tubulacao_percentual: d.nivel_tubulacao_percentual,\n    tempo_maturacao_min: d.tempo_maturacao_min,\n\n    // Energia\n    energia_kj: d.energia_kj,\n    energia_kwh: d.energia_kwh,\n    energia_total_kwh: d.energia_total_kwh,\n\n    // Desempenho térmico\n    desempenho_termico_percentual: d.desempenho_termico_percentual,\n    economia_reais: d.economia_reais,\n\n    // Classificações\n    condicao_termica: d.condicao_termica,\n    condicao_transferencia: d.condicao_transferencia,\n    faixa_desempenho_termico: d.faixa_desempenho_termico,\n    status_valvulas: d.status_valvulas,\n    criticidade: d.criticidade,\n\n    // Dados auxiliares\n    fator_solar: d.fator_solar,\n    observacao: d.observacao,\n\n    // Validação\n    validado: d.validado,\n    status_validacao: d.status_validacao,\n    alertas: d.alertas || []\n};\n\n\n// 3. Status visual\nnode.status({\n    fill: \"grey\",\n    shape: \"ring\",\n    text: \"Registro final preparado\"\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "5de9641f24aa0058",
+                "0d7ab0102774df81"
+            ]
+        ]
+    },
+    {
+        "id": "5de9641f24aa0058",
+        "type": "function",
+        "z": "a485149e4ab75a43",
+        "g": "fca42a5f0cb0c94b",
+        "name": "F8 Preparar PostgreSQL",
+        "func": "// F8 - PREPARAR POSTGRESQL\n\n// Objetivo:\n// Preparar a instrução SQL e os parâmetros\n// utilizados para persistir o registro final\n// no banco de dados PostgreSQL.\n\nmsg.query = `\nINSERT INTO public.leitura_monitoramento (\n    ds_origem,\n    dt_registro,\n\n    ds_estado_processo,\n    ds_status_operacional,\n    nr_ciclo,\n\n    nr_temperatura_entrada,\n    nr_temperatura_saida,\n    nr_delta_t,\n\n    nr_vazao_l_min,\n    nr_volume_instante_l,\n    nr_volume_total_l,\n\n    ds_valvula_entrada,\n    ds_valvula_saida,\n    nr_nivel_tubulacao_percentual,\n    nr_tempo_maturacao_min,\n\n    nr_energia_kj,\n    nr_energia_kwh,\n    nr_energia_total_kwh,\n\n    nr_desempenho_termico_percentual,\n    nr_economia_reais,\n\n    ds_condicao_termica,\n    ds_condicao_transferencia,\n    ds_faixa_desempenho_termico,\n    ds_status_valvulas,\n    ds_criticidade,\n\n    nr_fator_solar,\n    ds_observacao,\n\n    fg_validado,\n    ds_status_validacao\n\n)\nVALUES (\n\n    $1, $2, $3, $4, $5,\n    $6, $7, $8, $9, $10,\n    $11, $12, $13, $14, $15,\n    $16, $17, $18, $19, $20,\n    $21, $22, $23, $24, $25,\n    $26, $27, $28, $29\n\n);\n`;\n\n// Parâmetros correspondentes aos campos do INSERT\nmsg.params = [\n\n    msg.payload.origem,\n    msg.payload.timestamp,\n\n    msg.payload.estado_processo,\n    msg.payload.status_operacional,\n    msg.payload.ciclo,\n\n    msg.payload.temperatura_entrada,\n    msg.payload.temperatura_saida,\n    msg.payload.delta_t,\n\n    msg.payload.vazao_l_min,\n    msg.payload.volume_instante_l,\n    msg.payload.volume_total_l,\n\n    msg.payload.valvula_entrada,\n    msg.payload.valvula_saida,\n    msg.payload.nivel_tubulacao_percentual,\n    msg.payload.tempo_maturacao_min,\n\n    msg.payload.energia_kj,\n    msg.payload.energia_kwh,\n    msg.payload.energia_total_kwh,\n\n    msg.payload.desempenho_termico_percentual,\n    msg.payload.economia_reais,\n\n    msg.payload.condicao_termica,\n    msg.payload.condicao_transferencia,\n    msg.payload.faixa_desempenho_termico,\n    msg.payload.status_valvulas,\n    msg.payload.criticidade,\n\n    msg.payload.fator_solar,\n    msg.payload.observacao,\n\n    msg.payload.validado,\n    msg.payload.status_validacao\n\n];\n\n// Status visual da Function\nnode.status({\n    fill: \"blue\",\n    shape: \"dot\",\n    text: \"SQL preparado\"\n});\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 340,
+        "wires": [
+            [
+                "250d35b2ce4c9a95"
+            ]
+        ]
+    },
+    {
+        "id": "250d35b2ce4c9a95",
+        "type": "postgresql",
+        "z": "a485149e4ab75a43",
+        "g": "fca42a5f0cb0c94b",
+        "name": "monitoramento_termico",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "ed3b308ff7216c51",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 950,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17327f16a1d4589c",
+        "type": "csv",
+        "z": "a485149e4ab75a43",
+        "g": "fca42a5f0cb0c94b",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 890,
+        "y": 340,
+        "wires": [
+            [
+                "d7bd3a3405c1562e"
+            ]
+        ]
+    },
+    {
+        "id": "d7bd3a3405c1562e",
+        "type": "file",
+        "z": "a485149e4ab75a43",
+        "g": "fca42a5f0cb0c94b",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1200,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d7ab0102774df81",
+        "type": "debug",
+        "z": "a485149e4ab75a43",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b03ee661bf87c221",
+        "type": "http in",
+        "z": "6f575ce57b5aa039",
+        "name": "GET /api/status",
+        "url": "/api/status",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "6415a5499a3cae2a"
+            ]
+        ]
+    },
+    {
+        "id": "2ef5a933fc71cb85",
+        "type": "http in",
+        "z": "6f575ce57b5aa039",
+        "name": "GET /api/ultimas-leituras",
+        "url": "/api/ultimas-leituras",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "9d7e2e02abcd9b01"
+            ]
+        ]
+    },
+    {
+        "id": "8ffd2140b6500d11",
+        "type": "http in",
+        "z": "6f575ce57b5aa039",
+        "name": "GET /api/historico",
+        "url": "/api/historico",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "34145dfcecd3b1a1"
+            ]
+        ]
+    },
+    {
+        "id": "6415a5499a3cae2a",
+        "type": "function",
+        "z": "6f575ce57b5aa039",
+        "name": "API - F1 Buscar Status Atual",
+        "func": "// API - SQL STATUS ATUAL\n\nmsg.query = `\nSELECT *\nFROM public.leitura_monitoramento\nORDER BY cd_leitura_monitoramento DESC\nLIMIT 1;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 280,
+        "wires": [
+            [
+                "e8bfdb91ece0190c"
+            ]
+        ]
+    },
+    {
+        "id": "9d7e2e02abcd9b01",
+        "type": "function",
+        "z": "6f575ce57b5aa039",
+        "name": "API - F2 Buscar Últimas Leituras",
+        "func": "// API - SQL ÚLTIMAS LEITURAS\n\nmsg.query = `\nSELECT *\nFROM public.leitura_monitoramento\nORDER BY cd_leitura_monitoramento DESC\nLIMIT 20;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "02ab881d2f683516"
+            ]
+        ]
+    },
+    {
+        "id": "34145dfcecd3b1a1",
+        "type": "function",
+        "z": "6f575ce57b5aa039",
+        "name": "API - F3 Buscar Histórico",
+        "func": "// API - SQL HISTÓRICO\n\nmsg.query = `\nSELECT *\nFROM (\n    SELECT *\n    FROM public.leitura_monitoramento\n    ORDER BY cd_leitura_monitoramento DESC\n    LIMIT 100\n) AS ultimas_leituras\nORDER BY cd_leitura_monitoramento ASC;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 400,
+        "wires": [
+            [
+                "b599d6c09b18f0a1"
+            ]
+        ]
+    },
+    {
+        "id": "a04b8a708cb4531e",
+        "type": "http response",
+        "z": "6f575ce57b5aa039",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1530,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2dc5ff48378d4e36",
+        "type": "function",
+        "z": "6f575ce57b5aa039",
+        "name": "API - F4 Formatar Status Atual",
+        "func": "// API - FORMATAR STATUS ATUAL\n\nlet rows = msg.payload || [];\n\n// Função auxiliar para campos numéricos\nfunction numeroOuNull(valor) {\n    if (\n        valor === null ||\n        valor === undefined\n    ) {\n        return null;\n    }\n\n    let numero = Number(valor);\n\n    return Number.isFinite(numero)\n        ? numero\n        : null;\n}\n\nif (rows.length === 0) {\n\n    msg.payload = {\n        sucesso: false,\n        mensagem: \"Nenhum registro encontrado\"\n    };\n\n    return msg;\n}\n\nlet d = rows[0];\n\nmsg.payload = {\n\n    sucesso: true,\n\n    dados: {\n\n        // Identificação\n        id: d.cd_leitura_monitoramento,\n        origem: d.ds_origem,\n        timestamp: d.dt_registro,\n        ciclo: d.nr_ciclo,\n\n        // Processo\n        estado_processo: d.ds_estado_processo,\n        status_operacional: d.ds_status_operacional,\n\n        // Temperaturas\n        temperatura_entrada: numeroOuNull(d.nr_temperatura_entrada),\n        temperatura_saida: numeroOuNull(d.nr_temperatura_saida),\n        delta_t: numeroOuNull(d.nr_delta_t),\n\n        // Vazão e volume\n        vazao_l_min:numeroOuNull(d.nr_vazao_l_min),\n        volume_instante_l: numeroOuNull(d.nr_volume_instante_l),\n        volume_total_l:numeroOuNull(d.nr_volume_total_l),\n\n        // Válvulas e processo\n        valvula_entrada: d.ds_valvula_entrada,\n        valvula_saida: d.ds_valvula_saida,\n        nivel_tubulacao_percentual: numeroOuNull(d.nr_nivel_tubulacao_percentual),\n        tempo_maturacao_min: numeroOuNull(d.nr_tempo_maturacao_min),\n\n        // Energia\n        energia_kj: numeroOuNull(d.nr_energia_kj),\n        energia_kwh: numeroOuNull(d.nr_energia_kwh),\n        energia_total_kwh: numeroOuNull(d.nr_energia_total_kwh),\n\n        // Desempenho\n        desempenho_termico_percentual: numeroOuNull(d.nr_desempenho_termico_percentual),\n        faixa_desempenho_termico: d.ds_faixa_desempenho_termico,\n        economia_reais: numeroOuNull(d.nr_economia_reais),\n\n        // Classificações\n        condicao_termica: d.ds_condicao_termica,\n        condicao_transferencia: d.ds_condicao_transferencia,\n        status_valvulas: d.ds_status_valvulas,\n        criticidade: d.ds_criticidade,\n\n        // Dados auxiliares\n        fator_solar: numeroOuNull(d.nr_fator_solar),\n        observacao:d.ds_observacao,\n\n        // Validação\n        validado:d.fg_validado,\n        status_validacao:d.ds_status_validacao\n    }\n};\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 280,
+        "wires": [
+            [
+                "a04b8a708cb4531e"
+            ]
+        ]
+    },
+    {
+        "id": "4e2b06ceae313a4e",
+        "type": "http response",
+        "z": "6f575ce57b5aa039",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1530,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "95179b1593667413",
+        "type": "http response",
+        "z": "6f575ce57b5aa039",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1530,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "86f2bc50696e06e0",
+        "type": "function",
+        "z": "6f575ce57b5aa039",
+        "name": "API - F5 Formatar Últimas Leituras",
+        "func": "// API - FORMATAR ÚLTIMAS LEITURAS\n\nlet rows = msg.payload || [];\n\nfunction numeroOuNull(valor) {\n\n    if (\n        valor === null ||\n        valor === undefined\n    ) {\n        return null;\n    }\n\n    let numero = Number(valor);\n\n    return Number.isFinite(numero)\n        ? numero\n        : null;\n}\n\nmsg.payload = {\n\n    sucesso: true,\n    total: rows.length,\n\n    dados: rows.map(d => ({\n        id: d.cd_leitura_monitoramento,\n        timestamp: d.dt_registro,\n        origem: d.ds_origem,\n        estado_processo: d.ds_estado_processo,\n        status_operacional: d.ds_status_operacional,\n        temperatura_entrada: numeroOuNull(d.nr_temperatura_entrada),\n        temperatura_saida: numeroOuNull(d.nr_temperatura_saida),\n        delta_t: numeroOuNull(d.nr_delta_t),\n        vazao_l_min: numeroOuNull(d.nr_vazao_l_min),\n        energia_total_kwh: numeroOuNull(d.nr_energia_total_kwh),\n        desempenho_termico_percentual: numeroOuNull(d.nr_desempenho_termico_percentual),\n        economia_reais: numeroOuNull(d.nr_economia_reais),\n        criticidade: d.ds_criticidade\n    }))\n};\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 340,
+        "wires": [
+            [
+                "95179b1593667413"
+            ]
+        ]
+    },
+    {
+        "id": "ab90ac1aad7fbe77",
+        "type": "function",
+        "z": "6f575ce57b5aa039",
+        "name": "API - F6 Formatar Histórico",
+        "func": "// API - FORMATAR HISTÓRICO\n\nlet rows = msg.payload || [];\n\nfunction numeroOuNull(valor) {\n\n    if (\n        valor === null ||\n        valor === undefined\n    ) {\n        return null;\n    }\n\n    let numero = Number(valor);\n\n    return Number.isFinite(numero)\n        ? numero\n        : null;\n}\n\n\nmsg.payload = {\n\n    sucesso: true,\n    total: rows.length,\n\n    dados: rows.map(d => ({\n        timestamp: d.dt_registro,\n        temperatura_entrada: numeroOuNull(d.nr_temperatura_entrada),\n        temperatura_saida: numeroOuNull(d.nr_temperatura_saida),\n        delta_t: numeroOuNull(d.nr_delta_t),\n        vazao_l_min: numeroOuNull(d.nr_vazao_l_min),\n        energia_total_kwh: numeroOuNull(d.nr_energia_total_kwh),\n        desempenho_termico_percentual: numeroOuNull(d.nr_desempenho_termico_percentual),\n        economia_reais: numeroOuNull(d.nr_economia_reais),\n        criticidade: d.ds_criticidade\n    }))\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 400,
+        "wires": [
+            [
+                "4e2b06ceae313a4e"
+            ]
+        ]
+    },
+    {
+        "id": "e8bfdb91ece0190c",
+        "type": "postgresql",
+        "z": "6f575ce57b5aa039",
+        "name": "monitoramento_termico",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "fbb892f704ea7a6c",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 970,
+        "y": 280,
+        "wires": [
+            [
+                "2dc5ff48378d4e36"
+            ]
+        ]
+    },
+    {
+        "id": "02ab881d2f683516",
+        "type": "postgresql",
+        "z": "6f575ce57b5aa039",
+        "name": "monitoramento_termico",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "fbb892f704ea7a6c",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 970,
+        "y": 340,
+        "wires": [
+            [
+                "86f2bc50696e06e0"
+            ]
+        ]
+    },
+    {
+        "id": "b599d6c09b18f0a1",
+        "type": "postgresql",
+        "z": "6f575ce57b5aa039",
+        "name": "monitoramento_termico",
+        "query": "SELECT * FROM ;",
+        "postgreSQLConfig": "fbb892f704ea7a6c",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 970,
+        "y": 400,
+        "wires": [
+            [
+                "ab90ac1aad7fbe77"
+            ]
+        ]
+    },
+    {
+        "id": "b2d8b1d3affc1366",
+        "type": "inject",
+        "z": "d2f809a41b3a4303",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "4742e94e95967d3d"
+            ]
+        ]
+    },
+    {
+        "id": "4742e94e95967d3d",
+        "type": "subflow:ec6dfb29214d4a71",
+        "z": "d2f809a41b3a4303",
+        "name": "Entrada",
+        "x": 480,
+        "y": 360,
+        "wires": [
+            [
+                "07a0aa416d4bff62"
+            ]
+        ]
+    },
+    {
+        "id": "07a0aa416d4bff62",
+        "type": "subflow:69ea3584412aa93b",
+        "z": "d2f809a41b3a4303",
+        "name": "Pré-processamento",
+        "x": 690,
+        "y": 360,
+        "wires": [
+            [
+                "2124ab27d62812de"
+            ]
+        ]
+    },
+    {
+        "id": "2124ab27d62812de",
+        "type": "subflow:be51cd707e965d3f",
+        "z": "d2f809a41b3a4303",
+        "name": "Processamento",
+        "x": 920,
+        "y": 360,
+        "wires": [
+            [
+                "16da5562d64def67"
+            ]
+        ]
+    },
+    {
+        "id": "16da5562d64def67",
+        "type": "subflow:00f0e3ded8af766d",
+        "z": "d2f809a41b3a4303",
+        "name": "Classificação",
+        "x": 1130,
+        "y": 360,
+        "wires": [
+            [
+                "47b83043343f6fcc"
+            ]
+        ]
+    },
+    {
+        "id": "47b83043343f6fcc",
+        "type": "subflow:a485149e4ab75a43",
+        "z": "d2f809a41b3a4303",
+        "name": "Persistência",
+        "x": 1330,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "3467bda67d5b93c2",
+        "type": "subflow:6f575ce57b5aa039",
+        "z": "d2f809a41b3a4303",
+        "name": "API REST Dashboard",
+        "x": 520,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c31d90040f335407",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-postgresql": "0.16.2"
+        }
+    }
+]

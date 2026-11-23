@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Monitoramento Térmico Industrial</title>
+
+	<link rel="icon" href="data:,">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<main class="scada">
+		<!-- CABEÇALHO -->
+
+		<header class="topbar">
+			<div>
+				<span class="system-label"> MONITORAMENTO TÉRMICO INDUSTRIAL </span>
+
+				<h1>Monitoramento de Pré-aquecimento de Água</h1>
+
+				<p>Monitoramento em tempo real com Node-RED, PostgreSQL e Raspberry Pi.</p>
+			</div>
+
+			<div class="header-right">
+				<div class="demo-controls">
+					<span id="demoBadge" class="demo-badge" style="display: none;">MODO DEMONSTRAÇÃO</span>
+					<label for="seletorModo">Modo:</label>
+					<select id="seletorModo" class="demo-select">
+						<option value="real">Dados Reais ▼</option>
+						<option value="RECARREGANDO">Recarregando</option>
+						<option value="AQUECENDO">Aquecendo</option>
+						<option value="MATURANDO">Maturando</option>
+						<option value="TRANSFERINDO">Transferindo</option>
+					</select>
+				</div>
+
+				<div class="system-status">
+					<span id="apiStatus" class="status-dot online"> </span>
+
+					<div>
+						<strong id="statusOperacional"> Aguardando dados </strong>
+
+						<small id="dataAtualizacao"> -- </small>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- ÁREA PRINCIPAL -->
+
+		<section class="layout">
+			<!-- MONITORAMENTO DO PROCESSO -->
+
+			<section class="synoptic-panel">
+				<div class="panel-title">
+					<h2>Monitoramento do Processo</h2>
+
+					<span id="criticidade" class="badge normal"> Normal </span>
+				</div>
+
+				<!-- ETAPAS DO PROCESSO -->
+
+				<div class="process-steps">
+					<div class="step" id="stepRecarregando">Recarregando</div>
+
+					<div class="step" id="stepAquecendo">Aquecendo</div>
+
+					<div class="step" id="stepMaturando">Maturando</div>
+
+					<div class="step" id="stepTransferindo">Transferindo</div>
+				</div>
+
+				<!-- DIAGRAMA DO PROCESSO -->
+
+				<div class="process-diagram">
+					<!-- RESERVATÓRIO DE ENTRADA -->
+
+					<div class="equipment water-source">
+						<div class="equipment-title">Reservatório de Entrada</div>
+
+						<div class="tank tank-cold">
+							<div class="water cold-water"></div>
+						</div>
+
+						<div class="sensor-box sensor-in">
+							<span class="sensor-led" id="sensorEntradaLed"> </span>
+
+							<strong>T1</strong>
+
+							<small> Temperatura de Entrada </small>
+						</div>
+
+						<strong class="sensor-value cold" id="temperaturaEntrada">
+							0,00 °C
+						</strong>
+					</div>
+
+					<!-- TUBULAÇÃO -->
+
+					<div class="pipe-area">
+						<!-- VÁLVULA DE ENTRADA -->
+
+						<div class="valve industrial-valve" id="valvulaEntradaVisual">
+							<div class="valve-body"></div>
+
+							<div class="valve-handle"></div>
+
+							<span>V1</span>
+						</div>
+
+						<!-- SENSOR DE ENTRADA -->
+
+						<div class="sensor-node sensor-node-in">
+							<span>T1</span>
+						</div>
+
+						<!-- TUBULAÇÃO PRINCIPAL -->
+
+						<div class="pipe pipe-main" id="pipeMain">
+							<div class="pipe-inner">
+								<div class="flow-animation" id="flowAnimation"></div>
+							</div>
+						</div>
+
+						<!-- INCIDÊNCIA SOLAR -->
+
+						<div class="solar-zone" id="solarZone">
+							<div class="sun-svg" id="sunIcon">
+								<span>☀</span>
+							</div>
+
+							<strong id="fatorSolar"> Fator Solar: -- </strong>
+						</div>
+
+						<!-- TUBULAÇÃO AQUECIDA -->
+
+						<div class="pipe pipe-hot" id="pipeHot">
+							<div class="pipe-inner">
+								<div class="flow-animation hot-flow" id="flowAnimationHot"></div>
+							</div>
+						</div>
+
+						<!-- SENSOR DE SAÍDA -->
+
+						<div class="sensor-node sensor-node-out">
+							<span>T2</span>
+						</div>
+
+						<!-- VÁLVULA DE SAÍDA -->
+
+						<div class="valve industrial-valve" id="valvulaSaidaVisual">
+							<div class="valve-body"></div>
+
+							<div class="valve-handle"></div>
+
+							<span>V2</span>
+						</div>
+					</div>
+
+					<!-- RESERVATÓRIO DE SAÍDA -->
+
+					<div class="equipment water-output">
+						<div class="equipment-title">Reservatório de Saída</div>
+
+						<div class="tank tank-hot">
+							<div class="tank-scale">
+								<span>100%</span>
+								<span>75%</span>
+								<span>50%</span>
+								<span>25%</span>
+							</div>
+
+							<div class="tank-fill" id="tankFill"></div>
+						</div>
+
+						<div class="sensor-box sensor-out">
+							<span class="sensor-led" id="sensorSaidaLed"> </span>
+
+							<strong>T2</strong>
+
+							<small> Temperatura de Saída </small>
+						</div>
+
+						<strong class="sensor-value hot" id="temperaturaSaida"> 0,00 °C </strong>
+					</div>
+				</div>
+
+				<!-- INFORMAÇÕES PRINCIPAIS -->
+
+				<div class="process-footer">
+					<div>
+						<span> Estado do Processo </span>
+
+						<strong id="estadoProcesso"> -- </strong>
+					</div>
+
+					<div>
+						<span> Vazão </span>
+
+						<strong>
+							<span id="vazao"> 0,00 </span>
+							L/min
+						</strong>
+					</div>
+
+					<div>
+						<span> Diferença de Temperatura </span>
+
+						<strong>
+							<span id="deltaT"> 0,00 </span>
+							°C
+						</strong>
+					</div>
+
+					<div>
+						<span> Status da Validação </span>
+
+						<strong id="statusValidacao"> -- </strong>
+					</div>
+				</div>
+			</section>
+
+			<!-- INDICADORES -->
+
+			<aside class="side-panel">
+				<div class="card status-card">
+					<span> Origem dos Dados </span>
+
+					<strong id="origem"> -- </strong>
+				</div>
+
+				<div class="card">
+					<span> Ciclo Atual </span>
+
+					<strong id="ciclo"> 0 </strong>
+				</div>
+
+				<div class="card">
+					<span> Volume Acumulado </span>
+
+					<strong>
+						<span id="volumeTotal"> 0,00 </span>
+						L
+					</strong>
+				</div>
+
+				<div class="card">
+					<span> Energia Térmica Acumulada </span>
+
+					<strong>
+						<span id="energiaTotal"> 0,0000 </span>
+						kWh
+					</strong>
+				</div>
+
+				<div class="card">
+					<span> Economia Financeira Estimada </span>
+
+					<strong>
+						R$
+						<span id="economiaReais"> 0,00 </span>
+					</strong>
+				</div>
+
+				<div class="card efficiency-card">
+					<span> Desempenho Térmico </span>
+
+					<strong>
+						<span id="desempenhoTermicoPercentual"> 0,00 </span>
+
+						%
+					</strong>
+
+					<div class="mini-bar">
+						<div id="barraDesempenhoTermico"></div>
+					</div>
+				</div>
+			</aside>
+		</section>
+
+		<!--INFORMAÇÕES COMPLEMENTARES-->
+
+		<section class="bottom-grid">
+			<!-- GRÁFICO -->
+
+			<section class="panel chart-panel">
+				<div class="panel-title">
+					<h2>Histórico das Temperaturas</h2>
+
+					<span> Temperaturas de entrada e saída </span>
+				</div>
+
+				<canvas id="graficoHistorico"></canvas>
+			</section>
+
+			<!-- DIAGNÓSTICO -->
+
+			<section class="panel alerts-panel">
+				<div class="panel-title">
+					<h2>Diagnóstico do Processo</h2>
+
+					<span id="totalRegistros"> 0 registros </span>
+				</div>
+
+				<div class="diagnostic-box">
+					<strong id="observacao"> Aguardando leitura do sistema. </strong>
+
+					<p id="condicaoResumo">Sem diagnóstico no momento.</p>
+				</div>
+
+				<div class="alarm-list">
+					<div class="alarm-item normal" id="alarmSistema">
+						<span></span>
+
+						Sistema em operação
+					</div>
+
+					<div class="alarm-item" id="alarmTemperatura">
+						<span></span>
+
+						Temperatura dentro da faixa esperada
+					</div>
+
+					<div class="alarm-item" id="alarmFluxo">
+						<span></span>
+
+						Vazão monitorada
+					</div>
+				</div>
+			</section>
+
+			<!-- ÚLTIMAS LEITURAS -->
+
+			<section class="panel table-panel">
+				<div class="panel-title">
+					<h2>Últimas Leituras</h2>
+					<span> Dados armazenados no banco de dados </span>
+				</div>
+
+				<div class="table-wrap">
+					<table>
+						<thead>
+							<tr>
+								<th>Horário</th>
+								<th>Estado do Processo</th>
+								<th>Temperatura de Entrada</th>
+								<th>Temperatura de Saída</th>
+								<th>Diferença de Temperatura</th>
+								<th>Vazão</th>
+								<th>Criticidade</th>
+							</tr>
+						</thead>
+
+						<tbody id="tabelaRegistros">
+							<tr>
+								<td colspan="7">Aguardando dados...</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</section>
+	</main>
+
+	<script type="module" src="js/app.js"></script>
+</body>
+
+</html>
